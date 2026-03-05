@@ -1,0 +1,157 @@
+/* 
+  INRISE Mobile Login Page CSS Override 
+  Target URL: https://m.intoeflonline.com/mypage.php?view=login
+*/
+
+@import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
+/* 1. Global & Body Overrides */
+html,
+body {
+    background-color: #0a0e1a !important;
+    /* Dark theme background */
+    color: #e2e8f0 !important;
+    font-family: 'Wanted Sans Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Hide unwanted legacy UI components */
+.site-menubar,
+.site-navbar,
+.site-footnav {
+    display: none !important;
+    /* Hide old navigation bars to make it a standalone login page */
+}
+
+/* Hide the confusing keyboard toggle links */
+.form-group.m-b-sm.text-right {
+    display: none !important;
+}
+
+/* 3. Page Container Centering */
+.page {
+    background: transparent !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px !important;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 400px;
+    background: #111827 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px 24px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+/* 4. Form Logo/Title */
+#loginform h3.font-size-24 {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    text-align: center;
+    margin-bottom: 32px !important;
+    letter-spacing: -0.5px;
+    /* Optional: Replace text with a logo or styled text */
+}
+
+/* 5. Input Fields */
+.form-group {
+    margin-bottom: 20px !important;
+}
+
+.form-control {
+    width: 100% !important;
+    height: 54px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 0 16px !important;
+    font-size: 15px !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control::placeholder {
+    color: #64748b !important;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #e11d48 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2) !important;
+}
+
+/* 6. Checkbox & Help Links (ID/PW Find) */
+.form-group.clearfix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px !important;
+    margin-top: -5px !important;
+}
+
+.checkbox-custom.checkbox-primary {
+    margin: 0 !important;
+}
+
+.checkbox-custom label {
+    color: #94a3b8 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+}
+
+.checkbox-custom input[type="checkbox"] {
+    accent-color: #e11d48;
+    /* Modern checkbox color */
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+/* ID/PW Find Link */
+.pull-right[href="member_find.php"] {
+    color: #94a3b8 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.pull-right[href="member_find.php"]:hover {
+    color: #ffffff !important;
+}
+
+/* 7. Login Button */
+.btn.btn-primary.btn-block {
+    width: 100% !important;
+    height: 56px !important;
+    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 14px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.3) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+}
+
+.btn.btn-primary.btn-block:active,
+.btn.btn-primary.btn-block:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px rgba(225, 29, 72, 0.4) !important;
+    background: linear-gradient(135deg, #be123c 0%, #9f1239 100%) !important;
+}
