@@ -15,14 +15,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* 2. Hide unwanted legacy UI components */
-.site-menubar,
-.site-navbar,
-.site-footnav {
-    display: none !important;
-    /* Hide old navigation bars to make it a standalone login page */
-}
-
 /* Hide the confusing keyboard toggle links */
 .form-group.m-b-sm.text-right {
     display: none !important;
